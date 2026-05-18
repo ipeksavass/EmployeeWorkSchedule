@@ -1,0 +1,45 @@
+# Built artifacts
+**/build/
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Android Studio / IntelliJ IDEA
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/modules/
+.idea/deploymentTargetSelector.xml
+.idea/vcs.xml
+*.iml
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+gradlew.bat
+local.properties
+
+# Keystore files (Uygulama imzalama anahtarları - KESİNLİKLE pushlanmamalı)
+*.jks
+*.keystore
+*.p12
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Compose Compiler Metrics (Opsiyonel olarak aktif ederseniz üretilen raporlar)
+**/build/compose_metrics/
+**/build/compose_logs/
+
+# Local configuration file (Kişisel SDK yolları vb.)
+local.properties
