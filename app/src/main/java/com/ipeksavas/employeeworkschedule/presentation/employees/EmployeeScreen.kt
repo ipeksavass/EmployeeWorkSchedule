@@ -28,6 +28,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.ipeksavas.employeeworkschedule.presentation.employees.component.EmployeeItem
 
@@ -44,7 +45,9 @@ fun EmployeeScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Personel Listesi") },
+                title = { Text(
+                    text = "Personel Listesi",
+                    fontWeight= FontWeight.Bold)},
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer

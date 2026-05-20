@@ -10,8 +10,8 @@ class EmployeeViewModel : ViewModel() {
     val state: State<EmployeeListState> = _state
     private val allEmployees = mutableListOf(
         Employee(1, "İpek Savaş"),
-        Employee(2, "Esen Savas"),
-        Employee(3, "Emircan Unal")
+        Employee(2, "Esen Savaş"),
+        Employee(3, "Emircan Ünal")
     )
 
     init {
