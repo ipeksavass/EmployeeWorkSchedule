@@ -47,15 +47,41 @@ fun CalendarScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(
-                    text = state.employee?.name ?: "İzin Takvimi",
-                    fontWeight = FontWeight.Bold) },
+                title = { Text(text = state.employee?.name ?: "İzin Takvimi") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Geri")
                     }
                 }
             )
+        },
+        bottomBar = {
+            Surface(
+                tonalElevation = 8.dp,
+                shadowElevation = 4.dp
+            ) {
+                Button(
+                    onClick = {
+                        viewModel.saveChanges(onSuccess = {
+                            onNavigateBack()
+                        })
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                        .height(50.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary
+                    )
+                ) {
+                    Text(
+                        text = "Değişiklikleri Kaydet",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                }
+            }
         }
     ) { paddingValues ->
         Column(
